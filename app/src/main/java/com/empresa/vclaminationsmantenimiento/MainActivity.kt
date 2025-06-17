@@ -1,5 +1,7 @@
 package com.empresa.vclaminationsmantenimiento
 
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -22,6 +24,9 @@ import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 import com.empresa.vclaminationsmantenimiento.ui.gallery.GalleryFragment
 import androidx.appcompat.app.AppCompatDelegate
+import android.content.Context
+import android.util.Log
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +42,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
+
+        // Notificaciones mensajes
+        val alarmIntent = Intent(this, ChatCheckAlarmReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(
+            this, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        //val interval = 10 * 60 * 1000L // cada 10 minutos
+        val interval = 30 * 1000L // 30 segundos
+        val startTime = System.currentTimeMillis() + 5000 // empieza en 5 segundos
+
+        alarmManager.setRepeating(
+            AlarmManager.RTC_WAKEUP,
+            startTime,
+            interval,
+            pendingIntent
+        )
+        // ⬇️ AQUI va el Log para saber que se programó la alarma
+        Log.d("MainActivity", "Alarma configurada para cada 10 minutos")
+        // -----------------------------------------------------------------------------------------
 
         binding.appBarMain.fab.setOnClickListener { view ->
             startActivity(Intent(this, ChatActivity::class.java))

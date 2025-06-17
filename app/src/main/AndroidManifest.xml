@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Permiso para conexión a Internet (requerido para enviar correos) -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permiso para notificaciones -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
 
     <application
         android:allowBackup="true"
@@ -14,6 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VCLaminationsMantenimiento"
         tools:targetApi="31">
+        <activity
+            android:name=".NotificationUtils"
+            android:exported="false" />
+        <service
+            android:name=".ChatCheckerService"
+            android:foregroundServiceType="dataSync"
+            android:exported="false" />
         <activity
             android:name=".Ayuda"
             android:exported="false"
@@ -28,9 +39,11 @@
         <activity
             android:name=".Mensaje"
             android:exported="false" />
-        <!-- <activity
+        <!--
+ <activity
             android:name=".CreateTicketActivity"
-            android:exported="false" /> -->
+            android:exported="false" />
+        -->
         <activity
             android:name=".Ticket"
             android:exported="false" />
@@ -57,8 +70,7 @@
         <activity
             android:name=".reporte2"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <!-- Login por correo - Establecer como primera pantalla............................... -->
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- Login por correo - Establecer como primera pantalla............................... -->
         <activity
             android:name=".LoginEmail"
             android:exported="true"
@@ -74,6 +86,10 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.VCLaminationsMantenimiento.NoActionBar" />
+        <!-- Declaración correcta de BroadcastReceiver -->
+        <receiver
+            android:name=".ChatCheckAlarmReceiver"
+            android:exported="false" />
     </application>
 
 </manifest>

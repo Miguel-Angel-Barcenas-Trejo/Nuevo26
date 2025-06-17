@@ -219,7 +219,7 @@ class reporte1prev : AppCompatActivity() {
             val pdfFile = PdfHelper.generatePdf(this, datos, firmaSolicitado, firmaVoBo, firmaJefe, firmaVoTecnico)
 
             if (pdfFile.exists()) {
-                val destinatarios = listOf("barcenasm342@gmail.com", "l19590102@sjuanrio.tecnm.mx")
+                val destinatarios = listOf("barcenasm342@gmail.com", "auxiliar.mantenimiento@vclaminations.com", "supervisores.prensas@vclaminations.com", "jmantenimiento@vclaminations.com")
                 EmailHelper.sendEmail(this, destinatarios, pdfFile)
                 Toast.makeText(this, "Correo enviado con el PDF adjunto", Toast.LENGTH_SHORT).show()
             } else {

@@ -53,34 +53,42 @@ class reporte2 : AppCompatActivity() {
         // Listas personalizadas de firmas
         val firmasSolicitado = mapOf(
             "Firma de 'Solicitado'" to "Firma de Solicitado.png",
-            "Eduardo mendoza" to "Eduardo_mendoza.png",
-            "Irvin cano" to "Irvin_cano.png",
-            "Gabriel trejo" to "Gabriel_trejo.png",
-            "Alexis reyes" to "Alexis_reyes.png"
+            "Eduardo Mendoza" to "Eduardo_mendoza.png",
+            "Irvin Cano" to "Irvin_cano.png",
+            "Gabriel Trejo" to "Gabriel_trejo.png",
+            "Alexis Reyes" to "Alexis_reyes.png",
+            "Cecilia Hernandez" to "Cecilia_hernandez2.png",
+            "Jose Alberto" to "Jose_alberto.png"
         )
 
         val firmasVoBo = mapOf(
             "Firma de 'Recibo'" to "Firma de Solicitado.png",
-            "Eduardo mendoza" to "Eduardo_mendoza.png",
-            "Irvin cano" to "Irvin_cano.png",
-            "Gabriel trejo" to "Gabriel_trejo.png",
-            "Alexis reyes" to "Alexis_reyes.png"
+            "Eduardo Mendoza" to "Eduardo_mendoza.png",
+            "Irvin Cano" to "Irvin_cano.png",
+            "Gabriel Trejo" to "Gabriel_trejo.png",
+            "Alexis Reyes" to "Alexis_reyes.png",
+            "Cecilia Hernandez" to "Cecilia_hernandez2.png",
+            "Jose Alberto" to "Jose_alberto.png"
         )
 
         val firmasJefe = mapOf(
             "Firma de 'Realizado'" to "Firma de Solicitado.png",
-            "Eduardo mendoza" to "Eduardo_mendoza.png",
-            "Irvin cano" to "Irvin_cano.png",
-            "Gabriel trejo" to "Gabriel_trejo.png",
-            "Alexis reyes" to "Alexis_reyes.png"
+            "Eduardo Mendoza" to "Eduardo_mendoza.png",
+            "Irvin Cano" to "Irvin_cano.png",
+            "Gabriel Trejo" to "Gabriel_trejo.png",
+            "Alexis Reyes" to "Alexis_reyes.png",
+            "Cecilia Hernandez" to "Cecilia_hernandez2.png",
+            "Jose Alberto" to "Jose_alberto.png"
         )
 
         val firmasVoTecnico = mapOf(
             "Firma de 'Conformidad'" to "Firma de Solicitado.png",
-            "Eduardo mendoza" to "Eduardo_mendoza.png",
-            "Irvin cano" to "Irvin_cano.png",
-            "Gabriel trejo" to "Gabriel_trejo.png",
-            "Alexis reyes" to "Alexis_reyes.png"
+            "Eduardo Mendoza" to "Eduardo_mendoza.png",
+            "Irvin Cano" to "Irvin_cano.png",
+            "Gabriel Trejo" to "Gabriel_trejo.png",
+            "Alexis Reyes" to "Alexis_reyes.png",
+            "Cecilia Hernandez" to "Cecilia_hernandez2.png",
+            "Jose Alberto" to "Jose_alberto.png"
         )
 
         spinnerSolicitado.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, firmasSolicitado.keys.toList()).apply {
@@ -102,7 +110,9 @@ class reporte2 : AppCompatActivity() {
             "Eduardo_mendoza.png" to "1234",
             "Irvin_cano.png" to "abcd",
             "Gabriel_trejo.png" to "12345",
-            "Alexis_reyes.png" to "123456789"
+            "Alexis_reyes.png" to "123456789",
+            "Cecilia_hernandez2.png" to "4321",
+            "Jose_alberto.png" to "abc321"
         )
 
         //fun requiereValidarContrasena(nombre: String): Boolean {
@@ -209,7 +219,7 @@ class reporte2 : AppCompatActivity() {
             val pdfFile = PdfHelper.generatePdf(this, datos, firmaSolicitado, firmaVoBo, firmaJefe, firmaVoTecnico)
 
             if (pdfFile.exists()) {
-                val destinatarios = listOf("barcenasm342@gmail.com", "l19590102@sjuanrio.tecnm.mx")
+                val destinatarios = listOf("barcenasm342@gmail.com", "auxiliar.mantenimiento@vclaminations.com", "supervisores.prensas@vclaminations.com", "jmantenimiento@vclaminations.com")
                 EmailHelper.sendEmail(this, destinatarios, pdfFile)
                 Toast.makeText(this, "Correo enviado con el PDF adjunto", Toast.LENGTH_SHORT).show()
             } else {
