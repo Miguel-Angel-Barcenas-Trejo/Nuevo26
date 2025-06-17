@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Permite que el contenido ocupe toda la pantalla -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <TextView
+        android:id="@+id/text_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="Reporte de Mantenimiento"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!-- Boton de texto fecha -->
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <!-- Boton de texto reporte -->
+    <EditText
+        android:id="@+id/etReporte"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Reporte #"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <!-- Boton de texto turno -->
+    <EditText
+        android:id="@+id/etTurno"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Turno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <!-- Boton de texto maquina -->
+    <EditText
+        android:id="@+id/etMaquina"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:padding="12dp"
+        android:text="Maquina/Equipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFecha" />
+
+    <!-- Boton de texto responsable -->
+    <EditText
+        android:id="@+id/etResponsable"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:padding="12dp"
+        android:text="Responsable(s)"
+        app:layout_constraintStart_toEndOf="@id/etMaquina"
+        app:layout_constraintTop_toBottomOf="@id/etFecha" />
+
+    <!-- Boton de texto tipo de reporte -->
+    <EditText
+        android:id="@+id/etTipoReporte"
+        android:layout_width="242dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Tipo de reporte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMaquina" />
+
+    <!-- Boton de texto paro de maquina -->
+    <EditText
+        android:id="@+id/etParoMaquina"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Paro"
+        app:layout_constraintStart_toEndOf="@+id/etTipoReporte"
+        app:layout_constraintTop_toBottomOf="@+id/etResponsable" />
+
+    <!-- Boton de texto tipo de falla -->
+    <EditText
+        android:id="@+id/etTipoFalla"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:padding="12dp"
+        android:text="Tipo de falla y/o servicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etParoMaquina" />
+
+    <!-- Boton de texto causa raiz -->
+    <EditText
+        android:id="@+id/etCausaRaiz"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:padding="12dp"
+        android:text="Causa Raiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTipoFalla" />
+
+    <!-- Boton de texto actividad -->
+    <EditText
+        android:id="@+id/etActividad"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:padding="12dp"
+        android:text="Actividad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCausaRaiz" />
+
+    <!-- Boton de texto hora reporte -->
+    <EditText
+        android:id="@+id/etHoraReporte"
+        android:layout_width="87dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Hora reporte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etActividad" />
+
+    <!-- Boton de texto hora inicio -->
+    <EditText
+        android:id="@+id/etHoraInicio"
+        android:layout_width="87dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Hora inicio"
+        app:layout_constraintStart_toEndOf="@id/etHoraReporte"
+        app:layout_constraintTop_toBottomOf="@id/etActividad" />
+
+    <!-- Boton de texto hora final -->
+    <EditText
+        android:id="@+id/etHoraFinal"
+        android:layout_width="87dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Hora final"
+        app:layout_constraintStart_toEndOf="@id/etHoraInicio"
+        app:layout_constraintTop_toBottomOf="@id/etActividad" />
+
+    <!-- Boton de texto tiempo total -->
+    <EditText
+        android:id="@+id/etTiempoTotal"
+        android:layout_width="87dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Tiempo total"
+        app:layout_constraintStart_toEndOf="@id/etHoraFinal"
+        app:layout_constraintTop_toBottomOf="@id/etActividad" />
+
+    <!-- Boton de texto requerimientos -->
+    <EditText
+        android:id="@+id/etRequerimientos"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:padding="12dp"
+        android:text="Requerimientos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTiempoTotal" />
+
+    <!-- Boton de texto observaciones -->
+    <EditText
+        android:id="@+id/etObservaciones"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textMultiLine"
+        android:minLines="4"
+        android:padding="12dp"
+        android:text="Observaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etRequerimientos" />
+
+    <!-- Botón de guardar y enviar por correo -->
+    <Button
+        android:id="@+id/btnEnviarCorreo"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:minHeight="53dp"
+        android:text="Guardar y enviar"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etObservaciones" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

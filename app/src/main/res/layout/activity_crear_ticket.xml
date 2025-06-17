@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SlideshowOption2Activity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:text="Crear ticket"
+        android:textColor="@android:color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Boton de texto fecha -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:text="Nombre maquina/equipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <!-- Boton de texto solicitante -->
+    <EditText
+        android:id="@+id/etSolicitante"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:minLines="2"
+        android:text="Solicitante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNombre" />
+
+    <!-- Boton de texto descripcion -->
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:minLines="3"
+        android:text="Descripción del problema"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSolicitante" />
+
+    <!-- Guideline para alineación -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="31dp" />
+
+    <!-- Spinner tipo mantenimiento -->
+    <TextView
+        android:id="@+id/tvOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        android:layout_marginTop="16dp"
+        android:text="Selecciona el tipo de mantenimiento:"
+        android:textColor="@color/primaryContainer"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etDescripcion" />
+
+    <Spinner
+        android:id="@+id/spinnerMantenimiento"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/etDescripcion"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <!-- Spinner prioridad -->
+    <TextView
+        android:id="@+id/tvOpciones2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selecciona la prioridad:"
+        android:textColor="@color/primaryContainer"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/spinnerMantenimiento" />
+
+    <Spinner
+        android:id="@+id/spinnerPrioridad"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tvOpciones2" />
+
+    <!-- Botón de enviar -->
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="375dp"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:minHeight="53dp"
+        android:text="Enviar"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/spinnerPrioridad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

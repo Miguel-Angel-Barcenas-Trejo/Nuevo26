@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ayuda"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tituloAyuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centro de Ayuda"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Crear Ticket -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📩 Crear Ticket"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Para crear un ticket, ve al menú principal y selecciona la opción 'Nuevo ticket'. Completa el formulario con los detalles del problema y, al finalizar, presiona el botón 'Enviar'. La información se enviará automáticamente al chat, donde podrás continuar la conversación y mantener contacto con los demás usuarios o responsables." />
+        </LinearLayout>
+
+        <!-- Crear Reporte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝 Crear Reporte"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Para crear un reporte, dirígete al menú principal y selecciona el tipo de mantenimiento que necesitas: preventivo o correctivo. A continuación, elige la categoría correspondiente (prensas troqueladoras, máquinas de corte, cortadoras de alambre o prensa/plancha hidráulica). Una vez dentro, selecciona el equipo que deseas reportar. Se abrirá un formulario de reporte, donde deberás llenar la información solicitada. Si algún campo no aplica, puedes dejarlo en blanco. Al finalizar, selecciona las firmas requeridas y presiona el botón 'Guardar y Enviar'. La información será enviada automáticamente a tu correo electrónico." />
+        </LinearLayout>
+
+        <!-- Mandar Mensajes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💬 Mandar Mensajes"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si deseas enviar un mensaje sin crear un nuevo ticket, dirígete a la sección de mensajes. Toca el ícono de mensaje ubicado en la parte inferior derecha de la pantalla de inicio. Desde ahí, podrás escribir y enviar tu mensaje directamente." />
+        </LinearLayout>
+
+        <!-- Ver Archivos PDF -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📂 Ver Archivos PDF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Los archivos PDF se envían automáticamente a tu correo corporativo al generar un reporte. Si no los recibes, por favor contacta al área de soporte técnico para asistencia." />
+        </LinearLayout>
+
+        <!-- Dónde se guarda la información -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 ¿Dónde se guarda la información?"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toda la información registrada en los reportes se almacena de forma segura en un documento de Google Sheets, lo que permite mantener tus datos sincronizados y accesibles desde cualquier dispositivo autorizado. Si no tienes acceso, por favor contacta al área de soporte técnico." />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

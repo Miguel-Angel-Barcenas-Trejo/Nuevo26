@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.VCLaminationsMantenimiento" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primaryContainer</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/primaryContainer</item> <!-- Puedes definir otro color si lo prefieres -->
+        <item name="colorSecondaryVariant">@color/onPrimaryContainer</item>
+        <item name="colorOnSecondary">@color/onPrimaryContainer</item> <!-- Ajustado para mejor contraste -->
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme herepero -->
+    </style>
+
+    <style name="Theme.VCLaminationsMantenimiento.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.VCLaminationsMantenimiento.AppBarOverlay" parent="ThemeOverlay.Material3.Dark.ActionBar" />
+
+    <style name="Theme.VCLaminationsMantenimiento.PopupOverlay" parent="ThemeOverlay.Material3.Light" />
+</resources>
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permiso para conexión a Internet (requerido para enviar correos) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logoprincipal"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logoprincipal"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VCLaminationsMantenimiento"
+        tools:targetApi="31">
+        <activity
+            android:name=".Ayuda"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- Quita el apartado azul de la parte de arriba -->
+        <activity
+            android:name=".MensajeAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Mensaje"
+            android:exported="false" />
+        <!-- <activity
+            android:name=".CreateTicketActivity"
+            android:exported="false" /> -->
+        <activity
+            android:name=".Ticket"
+            android:exported="false" />
+        <activity
+            android:name=".CrearTicket"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".EmailHelper"
+            android:exported="false" />
+        <activity
+            android:name=".PdfHelper"
+            android:exported="false" />
+        <activity
+            android:name=".reporte1prev"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".SlideshowOption2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SlideshowOption1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".reporte2"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- Login por correo - Establecer como primera pantalla............................... -->
+        <activity
+            android:name=".LoginEmail"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"> <!-- Desabilita modo oscuro -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- ................................................................................................. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.VCLaminationsMantenimiento.NoActionBar" />
+    </application>
+
+</manifest>

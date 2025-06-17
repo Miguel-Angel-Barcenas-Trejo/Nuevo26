@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_mantenimiento">
+        <item>Preventivo</item>
+        <item>Correctivo</item>
+    </string-array>
+
+    <string-array name="niveles_prioridad">
+        <item>Alta</item>
+        <item>Media</item>
+        <item>Baja</item>
+    </string-array>
+</resources>

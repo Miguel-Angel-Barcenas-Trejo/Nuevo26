@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#27548A</color> <!-- P-40 -->
+    <color name="onPrimary">#FFFFFF</color> <!-- P-100 -->
+    <color name="primaryContainer">#000000</color> <!-- P-90 -->
+    <color name="onPrimaryContainer">#D8EFFF</color> <!-- P-10 -->
+    <color name="purple_500">#6200EE</color>
+
+</resources>
